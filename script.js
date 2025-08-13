@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const usernameInput = document.getElementById('username');
         const emailInput = document.getElementById('email').value.trim();
-        const passwordInput = document.getElementById('password').value.trim();
+        const passwordInput = document.getElementById('password');
 
         let isValid = true;
         let messages = [];
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isValid) return;
 
         // Password Validation
-        if (passwordInput.length < 8) {
+        const password = document.getElementById('password').value.trim();
+        if (password.length < 8) {
             messages.push('Password should be more than eight characters');
             isValid = false;
         }
