@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let messages = [];
 
         // Username validation
-        const username = document.getElementById('username').value.trim();
+        const username = usernameInput.value.trim();
         if (username.length < 3) {
             messages.push('Username should be more than 3 words.');
             isValid = false;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isValid) return;
 
         // Password Validation
-        const password = document.getElementById('password').value.trim();
+        const password = passwordInput.value.trim();
         if (password.length < 8) {
             messages.push('Password should be more than eight characters');
             isValid = false;
